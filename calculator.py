@@ -1,22 +1,22 @@
-a = float(input())
-op = input()
-b = float(input())
+number1 = float(input('Enter a number: '))
+operator = input('Enter an operator ("+", "-", "*", "/", "pow", "div", "mod"): ')
+number2 = float(input('Enter a number: '))
 
-if (b == 0) and ((op == "/") or (op == "div") or (op == "mod")):
-    print("Деление на 0!")
-elif op == "+":
-    print(a + b)
-elif op == "-":
-    print(a - b)
-elif op == "*":
-    print(a * b)
-elif op == "/":
-    print(a / b)
-elif op == "pow":
-    print(a ** b)
-elif op == "div":
-    print(a // b)
-elif op == "mod":
-    print(a % b)
+if (number2 == 0) and ((operator == "/") or (operator == "div") or (operator == "mod")):
+    print('Division by zero!')
+elif operator == "+":
+    print(number1 + number2)
+elif operator == "-":
+    print(number1 - number2)
+elif operator == "*":
+    print(number1 * number2)
+elif operator == "/":
+    print(number1 / number2)
+elif operator == "pow":
+    print(number1 ** number2)
+elif operator == "div":
+    print(number1 // number2)
+elif operator == "mod":
+    print(number1 % number2)
 else:
-    print("Неизвестная операция!")
+    print('Unknown operator!')
