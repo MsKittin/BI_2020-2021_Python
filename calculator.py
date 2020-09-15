@@ -20,4 +20,3 @@ elif operator == "mod":
     print(number1 % number2)
 else:
     print('Unknown operator!')
-
