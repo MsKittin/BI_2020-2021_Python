@@ -1,5 +1,6 @@
 import numpy as np
 
+
 '''
 Task 5
 Сделайте программу, получающую на вход текст, и выдающую этот же текст со следующими изменениями - буквы во всех 
@@ -13,15 +14,15 @@ Task 5
 given_string = 'Я уехал в провинцию начал рисовать подсолнухи и пить вино чтобы не сойти с ума от влюбленности в тебя' \
          ' но ничего не помогло'
 
-words_list = given_string.split(" ")
+words_list = given_string.split()
 
 
 def shuffle_chars(word) -> str:
-    char_list = [char for char in word]
+    char_list = list(word)
 
     shuffled_string = ""
 
-    if (len(char_list) == 1) or (len(char_list) == 2) or (len(char_list) == 3):
+    if len(char_list) <= 3:
         shuffled_string = "".join(char_list)
     else:
         for i in range(1, len(char_list) - 1):
