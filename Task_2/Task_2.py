@@ -29,27 +29,19 @@ def monkey_sort(lst):
         shuffle(lst)
 
 
-sorted_list = []
-time_list = []
-
 for i in range(1, 7):
+    time_list = []
     for j in range(1, 4):
+        cur_list = np.random.randint(1, 100, i)
+        start_time = time.time()
 
-        item_list = np.random.randint(0, 1001, i)
-        start = time.time()
-        monkey_sort(item_list)
-        finish = time.time()
-        sorting_time = finish - start
-        time_list.append(sorting_time)
-        if j >= 3:
-            for k in range(len(item_list)):
-                sorted_list.append(item_list[k])
-            print('sorted list of length {}:'.format(i), sorted_list)
+        monkey_sort(cur_list)
+        finish_time = time.time()
 
-            time_std = np.std(time_list)
-            plt.bar(i, np.mean(time_list), yerr=time_std)
-            sorted_list = []
-            time_list = []
+        cur_time = finish_time - start_time
+        time_list.append(cur_time)
+    time_std = np.std(time_list)
+    plt.bar(i, np.mean(time_list), yerr=time_std)
 
 plt.title("Dependence of execution time on list length")
 plt.xlabel("list length")
