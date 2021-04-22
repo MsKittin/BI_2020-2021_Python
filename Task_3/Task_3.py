@@ -9,10 +9,9 @@ Task 3
 '''
 
 coordinates = np.zeros(2)
-steps = 101
-path = np.array([])
+steps = np.arange(0, 101)
 
-for idx, step in enumerate(range(steps)):
+for idx in steps:
     movement = random.choice([[1, 0], [0, 1], [-1, 0], [0, -1]])
     coordinates += np.array(movement)
     plt.scatter(coordinates[0], coordinates[1], marker='.')
