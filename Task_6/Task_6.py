@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 '''
 Task 6
 Сгенерируйте и нарисуйте коврик Серпинского (https://en.wikipedia.org/wiki/Sierpinski_carpet)
@@ -13,9 +14,10 @@ def sierpinski_carpet(total):
     m = np.array([[0]])
 
     for x in range(1, total + 1):
-        m = np.concatenate((np.concatenate((m, m, m), axis=1),
+        concatenate = np.concatenate((m, m, m), axis=1)
+        m = np.concatenate((concatenate,
                             np.concatenate((m, np.ones([3 ** (x - 1), 3 ** (x - 1)]), m), axis=1),
-                            np.concatenate((m, m, m), axis=1)), axis=0)
+                            concatenate), axis=0)
     return m
 
 
