@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random
 
+
 '''
 Task 3
 Визуализируйте random walk в 2-мерном пространстве, где вы начинаете в (0, 0) и можете 
