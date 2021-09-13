@@ -42,7 +42,7 @@ def translate_seq(path_to_file, codon_table="Standard"):
         num += 1
 
 
-path_to_fasta = "/home/misskittin/Downloads/sample.fa"
+path_to_fasta = "./sample.fa"
 
 translated = translate_seq(path_to_fasta, codon_table="Standard")
 print(next(translated))
