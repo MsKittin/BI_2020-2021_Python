@@ -47,10 +47,10 @@ def translate_seq(path_to_file, codon_table="Standard"):
 
 path_to_fasta = "/home/misskittin/Downloads/sample.fa"
 
-transcript = translate_seq(path_to_fasta, codon_table="Standard")
-print(next(transcript))
-print(next(transcript))
-print(next(transcript))
-print(next(transcript))
-print(next(transcript))
+translated = translate_seq(path_to_fasta, codon_table="Standard")
+print(next(translated))
+print(next(translated))
+print(next(translated))
+print(next(translated))
+print(next(translated))
 
