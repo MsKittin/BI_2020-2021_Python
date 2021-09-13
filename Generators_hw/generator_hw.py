@@ -10,7 +10,6 @@ list(generate(2))
 
 
 def generate(n):
-
     for i in range(1, n + 1):
         comb = itertools.product(['A', 'T', 'G', 'C'], repeat=i)
         for j in comb:
@@ -18,7 +17,6 @@ def generate(n):
 
 
 print(list(generate(7)))
-
 
 '''
 Напишите генератор, осуществляющий считывание фасты и возвращающий по 1-ой оттранслированной последовательности 
@@ -33,7 +31,6 @@ print(list(generate(7)))
 
 
 def translate_seq(path_to_file, codon_table="Standard"):
-
     with open(path_to_file, 'r') as fasta_file:
         temp_fasta = [line.rstrip("\n") for line in fasta_file]
 
@@ -53,4 +50,3 @@ print(next(translated))
 print(next(translated))
 print(next(translated))
 print(next(translated))
-
